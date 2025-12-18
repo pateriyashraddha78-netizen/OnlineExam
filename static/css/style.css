@@ -1,0 +1,9 @@
+body {
+    background: #f8f9fa;
+}
+
+#question-area {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
