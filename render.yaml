@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: online-exam-python
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2
+    envVars:
+      - key: SECRET_KEY
+        # For security, set a real secret in the Render dashboard instead of committing secrets.
+        value: "change-me"
+      - key: INSTRUCTOR_PASSWORD
+        value: "instructor123"
